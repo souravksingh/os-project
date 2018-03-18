@@ -20,5 +20,15 @@ int main()
   {
   	scanf("%d",&tea[i]);
   }	
+  for(i=0;i<n;i++)
+  {
+	if((stu[i]>1000)&&(stu[i]<1200))
+	{
+		printf("Query %d will wait\n",i);
+	}
+	else if(stu[i]>1200)
+	{
+		printf("Query %d will not execute as arrival time is greater than 12:00\n",i);
+	}
   
 }
