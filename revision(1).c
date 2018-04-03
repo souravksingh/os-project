@@ -42,5 +42,15 @@ int main()
 	{
 		printf("Query %d will wait\n",i);
 	}
+	else if(tea[i]>1200)
+	{
+		printf("Query %d will not execute as arrival time is greater than 12:00\n",i);
+	}
+	else if(tea[i]<=1000)
+  	{
+  		printf("\nQuery %d will execute as arrival time is less than 10:00\n",i);
+  		counter++;
+	}
+  }
   
 }
