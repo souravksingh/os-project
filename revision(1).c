@@ -1,7 +1,3 @@
-Ques. 8. Sudesh Sharma is a Linux expert who wants to have an online system where he can handle student queries. 
-Since there can be multiple requests at any time he wishes to dedicate a fixed amount of time to every request so that everyone gets a fair share of his time.
-He will log into the system from 10am to 12am only.  He wants to have separate requests queues for students and faculty. Implement a strategy for the same.
-The summary at the end of the session should include the total time he spent on handling queries and average query time. 
 #include<stdio.h>
 int main()
 {
@@ -20,6 +16,15 @@ int main()
   {
   	scanf("%d",&tea[i]);
   }	
+  printf("Querry\t\tArrival time\n");
+  for(i=0;i<n;i++)
+  {
+  	printf("  %d\t\t  %d\n",i,stu[i]);
+  }
+  for(i=0;i<t;i++)
+  {
+  	printf("  %d\t\t  %d\n",i,tea[i]);
+  }
   for(i=0;i<n;i++)
   {
 	if((stu[i]>1000)&&(stu[i]<1200))
@@ -52,5 +57,7 @@ int main()
   		counter++;
 	}
   }
-  
+  tt=count+counter;
+  te=120/tt;//te=time taken by each querry
+  printf("Time taken for each query is %d\n",te);
 }
